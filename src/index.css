@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: Arial, system-ui, sans-serif;
+    @apply bg-dark-300 text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, system-ui, sans-serif;
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .page-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+  
+  .hover-glow:hover {
+    @apply shadow-neon-hover;
+  }
+
+  .button-press {
+    @apply active:transform active:scale-95 transition-transform duration-150;
+  }
+
+  .tech-background {
+    @apply bg-tech-grid bg-[size:40px_40px] animate-grid-flow;
+  }
+
+  .secure-background {
+    @apply bg-secure-vault;
+  }
+
+  .radar-background {
+    @apply bg-radial-glow;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
